@@ -11,12 +11,13 @@ introduction()
 def Wardrobe():
     #These are the lists of clothing the person can choose. I only wrote 5 because
     #writing more would take way too long and confusing
-  Tops = ["Off Shoulder top", "Long Sleeve top", "Crop top", "Sweater", "T-shirt",]
+  Tops = ["Off Shoulder top", "Long Sleeve top", "Crop top", "Sweater", "T-shirt"]
 
   Bottoms = ["Leggings", "Flarred jeans", "Boyfriend Jeans", "Sweatpants", "Skirt"]
 
   Shoes = [ "Flats", "Sneakers", "Wedges","Platforms", "Army Boots"]
     #This will print out the list so the user can see what clothing is in the lists
+  Good_drip = ["Flats", "Sneakers", "Wedges","Platforms", "Army Boots""Leggings", "Flarred jeans", "Boyfriend Jeans", "Sweatpants", "Skirt", "Off Shoulder top", "Long Sleeve top", "Crop top", "Sweater", "T-shirt"]
     #so they know what to input
   print(Tops)
   print("Please type in a top from the list.\n")
@@ -33,20 +34,20 @@ def Wardrobe():
   Shoe = input("Shoe selection: ")
 
 
-  if str(Top)=="Off Shoulder top" and str(Bottom)=="Flarred jeans" and str(Shoe)=="Platforms":
-      #With each wrong pair there will be advice on how to style the next try.
-      print("Try again next time. Try a skirt with flats.")
 
-      return
+  if Good_drip == True:
+    print("Good Drip homie")
+
+    if str(Top)=="Off Shoulder top" and str(Bottom)=="Flarred jeans" and str(Shoe)=="Platforms":
+      print("Try again next time. Try a skirt with flats.")
       #These are elif statments that if you choose a specific clothing it will give you a
       #specific advice and if you get it right it will tell you "nice drip homie"
   elif str(Top)=="Off Shoulder Top" and str(Bottom)=="Flarred jeans" and str(Shoe)=="Army Boots":
       print("Try again next time.Try some sneakers.")
-      return
+
 
   elif str(Top)=="Long Sleeve Top" and str(Bottom)== "Leggings" and str(Shoe)== "Flats" or "Sneakers" or "Wedges" or "Platforms" or "Army Boots":
       print("Try again next time. Try some boyfriend jeans with flats.")
-      return
   elif str(Top)=="Long Sleeve Top" and str(Bottom)== "Flarred jeans" and str(Shoe)== "Flats" or "Sneakers" or "Wedges" or "Platforms" or "Army Boots":
       print("Try again next time. Try some boyfriend jeans with sneakers.")
   elif str(Top)=="Long Sleeve Top" and str(Bottom)== "Sweatpants" and str(Shoe)== "Flats" or"Sneakers" or "Wedges" or "Platforms" or "Army Boots":
@@ -62,6 +63,7 @@ def Wardrobe():
   elif str(Top)=="T-shirt" and str(Bottom)== "Flarred jeans" and str(Shoe)== "Flats" or "Sneakers" or "Wedges" or "Platforms" or "Army Boots":
       print("Try again next time. Try some leggings with some sneakers.")
   else:
+      print("Wrong input dude.")
       #This prints out a phrase that lets users know they made a perfect outfit
     print(" Nice drip homie")
 Wardrobe()
