@@ -4,34 +4,68 @@
 #outfit pieces the user types in, which will be compared to each other to see if
 #the outfit is good or not. Each piece has a set outfit but each outfit has it's
 #own combination, ie. suits and skirts don't go to together but suits and pants do.
+def introduction():
+    print(" Welcome to The Drip Machine! This machine will help measure how good your drip is. Don't worry about any hardfeelings as even with the worst drip ADVICE is always given if it's not 100%. A list of clothing will also be shown and you must choose the items you'll be wearing as they are written. Enjoy and I hope you find the perfect drip.\n")
+introduction()
 
 def Wardrobe():
-    #These are the lists of clothing the person can choose. There will be more
-    #clothing that are in most closets and some not so much
-  Shirts = ["A-line Top", "Bardot Top", "Bodysuit"]
-  Pants = [" Straight", "Skinny", "Sailor"]
+    #These are the lists of clothing the person can choose. I only wrote 5 because
+    #writing more would take way too long and confusing
+  Tops = ["Off Shoulder top", "Long Sleeve top", "Crop top", "Sweater", "T-shirt",]
+
+  Bottoms = ["Leggings", "Flarred jeans", "Boyfriend Jeans", "Sweatpants", "Skirt"]
+
+  Shoes = [ "Flats", "Sneakers", "Wedges","Platforms", "Army Boots"]
     #This will print out the list so the user can see what clothing is in the lists
     #so they know what to input
-  print(Shirts)
-  print("Please type in a top.")
+  print(Tops)
+  print("Please type in a top from the list.\n")
   #They put in the article of clothing so the program holds the variable
   Top= input("Top selection: ")
 
   #The same thing repeats but with different articles of clothing
-  print(Pants)
+  print(Bottoms)
   print("Please type in pants.")
-  Pants = input("Pants selection: ")
-  # There will be articles of clothing that won't go with each other so this will
-  #raise an error to point out the bad choice of clothing
-  if str(Top)=="Bodysuit" and str(Pants)=="straight":
-      #With each wrong pair there will be advice on how to style the next try
-      print("Try again next time. Try flarred pants.")
+  Bottom = input("Pants selection: ")
+
+  print(Shoes)
+  print("Please type in Shoes.")
+  Shoe = input("Shoe selection: ")
+
+
+  if str(Top)=="Off Shoulder top" and str(Bottom)=="Flarred jeans" and str(Shoe)=="Platforms":
+      #With each wrong pair there will be advice on how to style the next try.
+      print("Try again next time. Try a skirt with flats.")
+
+      return
+      #These are elif statments that if you choose a specific clothing it will give you a
+      #specific advice and if you get it right it will tell you "nice drip homie"
+  elif str(Top)=="Off Shoulder Top" and str(Bottom)=="Flarred jeans" and str(Shoe)=="Army Boots":
+      print("Try again next time.Try some sneakers.")
+      return
+
+  elif str(Top)=="Long Sleeve Top" and str(Bottom)== "Leggings" and str(Shoe)== "Flats" or "Sneakers" or "Wedges" or "Platforms" or "Army Boots":
+      print("Try again next time. Try some boyfriend jeans with flats.")
+      return
+  elif str(Top)=="Long Sleeve Top" and str(Bottom)== "Flarred jeans" and str(Shoe)== "Flats" or "Sneakers" or "Wedges" or "Platforms" or "Army Boots":
+      print("Try again next time. Try some boyfriend jeans with sneakers.")
+  elif str(Top)=="Long Sleeve Top" and str(Bottom)== "Sweatpants" and str(Shoe)== "Flats" or"Sneakers" or "Wedges" or "Platforms" or "Army Boots":
+      print("Try again next time. Try some boyfriend jeans with army boots.")
+  elif str(Top)=="Long Sleeve Top" and str(Bottom)== "Skirt" and str(Shoe)== "Flats" or "Sneakers" or "Wedges" or "Platforms" or "Army Boots":
+      print("Try again next time. Try some boyfriend jeans wwith platforms.")
+
+  elif str(Top)=="Crop top" and str(Bottom)== "Flarred jeans" and str(Shoe)== "Flats" or "Sneakers" or "Wedges" or "Platforms" or "Army Boots":
+      print("Try again next time. Try some sweatpants with army boots.")
+
+  elif str(Top)=="Sweater" and str(Bottom)== "Sweatpants" and str(Shoe)== "Flats" or "Sneakers" or "Wedges" or "Platforms" or "Army Boots":
+      print("Try again next time. Try a skirt with platforms.")
+  elif str(Top)=="T-shirt" and str(Bottom)== "Flarred jeans" and str(Shoe)== "Flats" or "Sneakers" or "Wedges" or "Platforms" or "Army Boots":
+      print("Try again next time. Try some leggings with some sneakers.")
   else:
       #This prints out a phrase that lets users know they made a perfect outfit
     print(" Nice drip homie")
 Wardrobe()
 
-#Debating on wether I should focus on female clothing or do both men and female.
-#It would also be nice to have a suggestsion box so that if there is an outfit or clothing
-#that looks good it can be added to the program. I'm also unsure of having color
-#color matching added to it too. 
+
+#Fixed on womans clothing but not sure how to get it so that when someone puts in
+#gobbldy gook the program desn't take it and stops them and has them rewrite in answer
