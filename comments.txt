@@ -1,1 +1,4 @@
 I think you have a good, basic start here. I think that you need to make clear what the user's choices are for the input: right now, the user can type anything and there's no sense of what the response will be. So I think you need to look for ways to constrain user choice, perhaps by giving numbered choices ie "enter 1 for this kind of shirt" etc. Let me know if you'd like to meet and discuss this a bit more in-depth, since I think that would make the conversation a bit easier.
+
+MILESTONE 2 COMMENTS
+I'm getting an error when i try to enter things, so I think you should use raw_input rather than just input. When I did this, the program worked, but I didn't make all the changes to see what would happen then. We talked about this yesterday, but I think you're on the right track here. For the final submission, just make sure the code runs and spits something out comparable to what you want!
